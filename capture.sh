@@ -88,7 +88,7 @@ uploadfiles()
 		# z will compress, JPG doesn't compress well though... 
 		tar -cf "$tarfilename" "$dirname"
 
-		${basepath}b2 sync "$tarpath" "b2://z1254-FMSCSlideshow/"
+		${basepath}b2 sync "$tarpath" "b2://${B2BUCKETNAME}/"
 		exit $?
 	fi
 	# we don't want to be here... 
