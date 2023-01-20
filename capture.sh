@@ -61,7 +61,7 @@ displayusage()
 
 setupapi()
 {
-	/home/mike/b2 authorize-account $B2KEYID $B2APPKEY
+	${basepath}b2 authorize-account $B2KEYID $B2APPKEY
 }
 
 uploadfiles()
