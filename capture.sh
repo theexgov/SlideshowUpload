@@ -43,7 +43,7 @@ captureimage()
 	imagename="${imagepath}`date '+img-%Y%m%d-%H%M%S.jpg'`" 
 
 	# this will obviously change with the camera specific IP... 
-	ffmpeg -i rtsp://admin:password@127.0.0.1/image.jpg -qscale:v 3 -frames 1 "$imagename"
+	ffmpeg -rtsp_transport tcp -i rtsp://admin:password@127.0.0.1/image.jpg -qscale:v 3 -frames 1 "$imagename"
 	exit $?
 }
 
